@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Painel do Usuário</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div id="header">
+        <div class="header-content">
+            <h1>Painel do Usuário</h1>
+            <a href="{{ url_for('sair') }}">
+                <button id="btn-sair">
+                    <h3>Sair</h3>
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div id="container">
+        <h2>Bem-vindo, {{ usuario }}!</h2>
+
+        <p class="info"><span>Perfil:</span> {{ dados.perfil }}</p>
+        <p class="info"><span>Descrição:</span> {{ dados.descricao }}</p>
+        <p class="info"><span>Gênero:</span> {{ dados.genero }}</p>
+        <p class="info"><span>Prontuário:</span> {{ dados.prontuario }}</p>
+        <p class="info"><span>Disciplina:</span> {{ dados.disciplina }}</p>
+        <p class="info"><span>Orientador:</span> {{ dados.orientador }}</p>
+    </div>
+
+</body>
+</html>

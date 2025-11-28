@@ -1,0 +1,120 @@
+/* ===== Reset básico ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ===== Cores Principais ===== */
+:root {
+    --primary: #0056ff;
+    --secondary: #003bb3;
+    --bg: #f3f5f7;
+    --text: #333;
+    --white: #fff;
+    --error: #d32f2f;
+}
+
+/* ===== Body ===== */
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    min-height: 100vh;
+    background: var(--bg);
+}
+
+/* ===== Header ===== */
+#header {
+    background: var(--primary);
+    color: var(--white);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+#header h1 {
+    font-size: 32px;
+}
+
+/* ===== Container Geral ===== */
+#container {
+    width: 90%;
+    max-width: 500px;
+    padding: 25px;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.1);
+    margin-top: 100px;
+}
+
+/* ===== Formulário ===== */
+#form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+}
+
+#form label h2 {
+    margin-bottom: 5px;
+    font-size: 20px;
+}
+
+#form input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    transition: 0.2s;
+}
+
+#form input:focus {
+    border-color: var(--primary);
+}
+
+/* ===== Botão ===== */
+#btn, #btn-sair {
+    width: 100%;
+    padding: 12px;
+    background: var(--primary);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+#btn:hover, #btn-sair:hover {
+    background: var(--secondary);
+}
+
+/* ===== Erros ===== */
+.error-message {
+    width: 90%;
+    margin: 15px auto;
+    padding: 12px;
+    background: var(--error);
+    color: var(--white);
+    text-align: center;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* ===== Página de Informações ===== */
+.info {
+    font-size: 20px;
+    margin: 12px 0;
+}
+
+.info span {
+    font-weight: bold;
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8" />
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div id="header">
+        <h1>Login</h1>
+    </div>
+
+    {% if erro %}
+        <div class="error-message">{{ erro }}</div>
+    {% endif %}
+
+    <div id="container">
+        <div id="form">
+            <form action="{{ url_for('entrar') }}" method="POST">
+                <input type="text" id="nome" name="nome" required placeholder="Digite seu nickname">
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+                <input type="password" id="senha" name="senha" required placeholder="Digite sua senha">
+                <button type="submit" id="btn">
+                    <h3>Entrar</h3>
+                </button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
